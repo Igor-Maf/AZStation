@@ -1,0 +1,132 @@
+/* MAIN ELEMENTS */
+body {
+    background-color: #257E78;
+    font: normal 14px Arial, Helvetica, sans-serif;
+    color: #29264E;
+    margin: 0
+}
+a {
+    color: #95CAE4;
+    text-decoration: none
+}
+a:hover {
+    color: #008AB8
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #29264E;
+    background-image: -webkit-linear-gradient(left, #95CAE4, #29264E, #95CAE4); 
+    background-image: -moz-linear-gradient(left, #95CAE4, #29264E, #95CAE4); 
+    background-image: -ms-linear-gradient(left, #95CAE4, #29264E, #95CAE4); 
+    background-image: -o-linear-gradient(left, #95CAE4, #29264E, #95CAE4)
+}
+img {
+    max-width: 100%
+}
+
+/* form */
+form {
+    width: 350px;
+    margin-bottom: 50px
+}
+label {
+    font-weight: bold;
+    cursor: pointer
+}
+input, textarea, select, button {
+    width : 200px;
+    margin: 0;
+    float: right;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box
+}
+
+.form-standart input[type="number"] {
+    width: 70px;
+    text-align: center;
+    float: none;
+    margin-left: 20px
+}
+
+/* table */
+table {
+    border: 1px solid #29264E;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center
+}
+th {
+    background-color: #40B8AF;
+    color: #fff
+}
+th, td {
+    padding: 10px 15px;
+    border: 1px solid #29264E
+}
+
+
+/* PAGE BLOCKS */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff
+}
+
+/* header */
+header, footer, section {
+    padding: 0 20px
+}
+header, footer {
+    background-color: #29264E
+}
+header {
+    border-bottom: 1px solid #40B8AF;
+    height: 70px
+}
+header .app-title, header .menu, footer p {
+    display: inline-block;
+    color: #40B8AF
+}
+
+/* content section */
+#error {
+    background-color: #CC3333;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-weight: bold
+}
+section {}
+
+/* footer */
+footer {
+    border-top: 1px solid #40B8AF;
+    text-align: right
+}
+footer > p:first-child {
+    float: left
+}
+
+/* MENU */
+.menu {
+    float: right;
+    list-style: none inside
+}
+.menu > li {
+    float: left;
+    margin-right: 20px
+}
+.menu > li:last-child {
+    margin-right: 0
+}
+.menu > li > a {
+    color: #40B8AF;
+    line-height: 45px
+}
+.menu > li > a:hover {
+    color: #fff
+}
