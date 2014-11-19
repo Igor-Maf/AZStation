@@ -27,6 +27,11 @@ class View extends Smarty {
                 'id' => 'clients',
                 'title' => 'Клиенты',
                 'link' => BASE_URL . 'clients'
+            ),  
+            array (
+                'id' => 'gifts',
+                'title' => 'Подарки',
+                'link' => BASE_URL . 'gifts'
             )
         );
         

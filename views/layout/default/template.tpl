@@ -8,13 +8,14 @@
         <script type="text/javascript" src="{$_layoutParams.root}public/js/jquery.validationEngine-ru.js"></script>
         <script type="text/javascript" src="{$_layoutParams.root}public/js/jquery.validationEngine.js"></script>
         <script type="text/javascript" src="{$_layoutParams.root}public/js/jquery-ui-1.9.2.custom.min.js"></script>
+        <script type="text/javascript" src="{$_layoutParams.root}public/js/jquery.jclock.js"></script>
         <script type="text/javascript" src="{$_layoutParams.root}public/js/main.js"></script>
+        
         {if isset($_layoutParams.js) && count($_layoutParams.js)}
             {foreach from = $_layoutParams.js item = js}
                 <script type="text/javascript" src="{$js}"></script>
             {/foreach}
         {/if}
-        
         
         <link href="{$_layoutParams.root}public/css/validationEngine.jquery.css" type="text/css" rel="stylesheet"/>
         <link href="{$_layoutParams.root}public/css/jquery-ui-1.9.2.custom.min.css" type="text/css" rel="stylesheet"/>
@@ -45,7 +46,8 @@
                 {include file=$_content}
             </section>
             <footer>
-                <p>{$smarty.now|date_format:"%Y-%m-%d, %H:%M:%S"}</p>
+                <p class="jclock"></p>
+                {*<p>{$smarty.now|date_format:"%Y-%m-%d, %H:%M:%S"}</p>*}
                 <p>&copy {$_layoutParams.app_create}</p>
             </footer>
         </div>

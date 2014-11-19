@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-17 23:33:11
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-19 22:32:38
          compiled from "E:\xampp\htdocs\azs-app\views\layout\default\template.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:151535468a4762b97d4-00283436%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '51dd3fafc78795ed7923048e8ee96ae2d69492d3' => 
     array (
       0 => 'E:\\xampp\\htdocs\\azs-app\\views\\layout\\default\\template.tpl',
-      1 => 1416263526,
+      1 => 1416432755,
       2 => 'file',
     ),
   ),
@@ -29,8 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5468a476715408_63992948')) {function content_5468a476715408_63992948($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'E:\\xampp\\htdocs\\azs-app\\libs\\smarty\\libs\\plugins\\modifier.date_format.php';
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5468a476715408_63992948')) {function content_5468a476715408_63992948($_smarty_tpl) {?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -56,8 +55,13 @@ public/js/jquery-ui-1.9.2.custom.min.js"><?php echo '</script'; ?>
 >
         <?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
+public/js/jquery.jclock.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
 public/js/main.js"><?php echo '</script'; ?>
 >
+        
         <?php if (isset($_smarty_tpl->tpl_vars['_layoutParams']->value['js'])&&count($_smarty_tpl->tpl_vars['_layoutParams']->value['js'])) {?>
             <?php  $_smarty_tpl->tpl_vars['js'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['js']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['_layoutParams']->value['js']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -70,7 +74,6 @@ $_smarty_tpl->tpl_vars['js']->_loop = true;
 >
             <?php } ?>
         <?php }?>
-        
         
         <link href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
 public/css/validationEngine.jquery.css" type="text/css" rel="stylesheet"/>
@@ -116,8 +119,8 @@ $_smarty_tpl->tpl_vars['menu']->_loop = true;
 
             </section>
             <footer>
-                <p><?php echo smarty_modifier_date_format(time(),"%Y-%m-%d, %H:%M:%S");?>
-</p>
+                <p class="jclock"></p>
+                
                 <p>&copy <?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['app_create'];?>
 </p>
             </footer>

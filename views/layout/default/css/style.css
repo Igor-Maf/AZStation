@@ -35,7 +35,7 @@ label {
     cursor: pointer
 }
 input, textarea, select, button {
-    width : 200px;
+    width : 220px;
     margin: 0;
     float: right;
     -webkit-box-sizing: border-box;

@@ -3,16 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/xampp/htdocs/azs-app/app/Controller.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/views/layout/default/template.tpl</file>
-            <file>file:/E:/xampp/htdocs/azs-app/app/Model.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/views/layout/default/css/style.css</file>
-            <file>file:/E:/xampp/htdocs/azs-app/controllers/clientsController.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/views/clients/index.tpl</file>
-            <file>file:/E:/xampp/htdocs/azs-app/app/Database.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/views/_pagination/pagination.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/app/Request.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/models/clientsModel.php</file>
             <file>file:/E:/xampp/htdocs/azs-app/app/View.php</file>
         </group>
     </open-files>

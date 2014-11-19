@@ -16,7 +16,7 @@ abstract class Controller {
             $model = new $model;
             return $model;
         } else {
-            throw new Exception('This model is not found.');
+            throw new Exception(''. $model .' model is not found.');
         }
     }
     
@@ -25,7 +25,7 @@ abstract class Controller {
         if (is_readable($root)) {
             require_once $root;
         } else {
-            throw new Exception('Error in load library. This library is not found.');
+            throw new Exception('Error in load library '. $library .'. This library is not found.');
         }
     }
     
