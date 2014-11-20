@@ -17,7 +17,7 @@ class clientsController extends Controller {
         $this->loadLibrary('pagination');
         $pagination = new Paginador();
         
-        $this->_view->assign('clients', $pagination->paginar($this->_model->getClients(), $pagina, 5));
+        $this->_view->assign('clients', $pagination->paginar($this->_model->getClients(), $pagina, 8));
         $this->_view->assign('pagination', $pagination->getView('pagination', 'clients/index'));
         
         $this->_view->assign('title', 'Клиенты АЗС');

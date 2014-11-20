@@ -23,7 +23,7 @@ class giftsController extends Controller {
         
         if ($this->getInt('add_gift') == 1) {
             $this->_view->assign('data', $_POST);
-            $this->loadLibrary('Thumb');
+            $this->loadLibrary('ThumbClass');
             
             if (!$this->getSql('gift_name')) {
                 $this->_view->assign('_error', 'Заполните "Название"');
@@ -51,25 +51,50 @@ class giftsController extends Controller {
                 $this->_view->renderizer('index');
                 exit;
             }
-            if ($thumb->saveFile($file_tmp, $filename)) {}
             
-//            Thumb::saveFile($file_tmp, $filename);
-           
-//            var_dump($_FILES["gift_thumb"]);           
+            $path = ROOT . 'public' . DS . 'img' . DS . 'gifts' . DS;
+            $thumb_url = BASE_URL . 'public/img/gifts/' . $filename;
             
-//            $this->_model->insertClient( 
-//                    $this->getSql('client_fio'),
-//                    $this->getSql('client_address'),
-//                    $this->getSql('client_mail'), 
-//                    $this->getSql('client_number'));
-//            
-//            $this->redirect('clients');
+            if (!$thumb->saveFile($file_tmp, $filename, $path)) {
+                $this->_view->assign('_error', 'Ошибка загрузки файла. Проверьте наличие папки. ');
+                $this->_view->renderizer('index');
+                exit;
+            }
+            
+            if (!$this->getDecimal('gift_scores')) {
+                $this->_view->assign('_error', 'Заполните "Баллы"');
+                $this->_view->renderizer('index');
+                exit;
+            }
+            
+            
+            $this->_model->insertGift( 
+                    $thumb_url,
+                    $this->getSql('gift_name'),
+                    $path . $filename,
+                    $this->getDecimal('gift_scores'));
+            
+            $this->redirect('gifts');
         }
         $this->_view->renderizer('index');
     }
     
-    public function edit($id) {}
-    
-    
-    public function delete($id) {}
+    public function delete($id) {
+        if (!$this->filterInt($id)) {
+            $this->redirect('gifts');
+        }
+        if (!$this->_model->getGiftById($this->filterInt($id))) {
+            $this->redirect('gifts');
+        }
+        
+        $gift_arr = $this->_model->getGiftById($this->filterInt($id));
+        $thumb_path = $gift_arr['gift_thumb_path'];
+        
+        if (file_exists($thumb_path)) {
+            @unlink($thumb_path);
+        }    
+        
+        $this->_model->deleteGift($this->filterInt($id));
+        $this->redirect('gifts');
+    }
 }

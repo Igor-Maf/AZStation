@@ -1,5 +1,6 @@
 <h1> Клиенты АЗС </h1>
 <hr>
+<p id="access">При добавлении нового клиента ему начисляются 100 баллов. </p>
 <form name="form" id="form" method="post" action="">
     <input type="hidden" name="add_client" value="1">
     <p>

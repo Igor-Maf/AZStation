@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-19 22:38:58
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-20 22:01:30
          compiled from "E:\xampp\htdocs\azs-app\views\gifts\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10235546b99640f70d7-15806527%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '65e117ff95fc7548fd2811aca3d5f79fcd99f2ca' => 
     array (
       0 => 'E:\\xampp\\htdocs\\azs-app\\views\\gifts\\index.tpl',
-      1 => 1416433132,
+      1 => 1416517285,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'data' => 0,
     'gifts' => 0,
+    '_layoutParams' => 0,
     'g' => 0,
     'pagination' => 0,
   ),
@@ -41,6 +42,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 "/>
     </p>  
     <p>
+        <label for="gift_scores"> Баллы </label>
+        <input type="number" min="10" max="10000" step="10" id="gift_scores" class="validate[required]" name="gift_scores" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['data']->value['gift_scores'])===null||$tmp==='' ? '' : $tmp);?>
+}" />
+    </p>
+    <p>
         <input type="submit" value="Добавить подарок">
     </p>
 </form>
@@ -49,9 +55,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if (isset($_smarty_tpl->tpl_vars['gifts']->value)&&count($_smarty_tpl->tpl_vars['gifts']->value)) {?>
     <table>
         <tr>
-            <th></th>
+            <th><img src="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root_img'];?>
+icons/thumb.png" title="Изображение" class="icon"></th>
             <th>Подарок</th>
             <th>Баллы</th>
+            <th>
+                <img src="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root_img'];?>
+icons/delete-property.png" title="Удаление" class="icon">
+            </th>
         </tr>
         <?php  $_smarty_tpl->tpl_vars['g'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['g']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['gifts']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -62,10 +73,18 @@ $_smarty_tpl->tpl_vars['g']->_loop = true;
                 <td><img src="<?php echo $_smarty_tpl->tpl_vars['g']->value['gift_thumb_url'];?>
 " title="<?php echo $_smarty_tpl->tpl_vars['g']->value['gift_name'];?>
 " class="thumbnail"></td>
-                <td><?php echo $_smarty_tpl->tpl_vars['g']->value['gift_name'];?>
+                <td><?php echo stripslashes($_smarty_tpl->tpl_vars['g']->value['gift_name']);?>
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['g']->value['gift_scores'];?>
 </td>
+                <td>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
+gifts/delete/<?php echo $_smarty_tpl->tpl_vars['g']->value['gift_id'];?>
+">
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root_img'];?>
+icons/delete.png" title="Удалить" class="icon">
+                    </a>
+                </td>
             </tr>
         <?php } ?>
     </table>

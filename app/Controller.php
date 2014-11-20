@@ -39,10 +39,8 @@ abstract class Controller {
      
     protected function getSql($key) {
         if (isset($_POST[$key]) && !empty($_POST[$key])) {
-            $_POST[$key] = strip_tags($_POST[$key]);
-            if (!get_magic_quotes_gpc())
-                $_POST[$key] = mysql_real_escape_string($_POST[$key]);
-            
+            $_POST[$key] = stripslashes($_POST[$key]);
+            $_POST[$key] = mysql_real_escape_string($_POST[$key]);
             return trim($_POST[$key]);
         }
     }

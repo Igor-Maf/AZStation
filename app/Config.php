@@ -3,7 +3,7 @@ define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'default');
 define('BASE_URL', 'http://localhost/azs-app/');
 
-define('APP_NAME', 'AZS application');
+define('APP_NAME', 'azs-app');
 define('APP_COPY', 'Кузнецов Александр');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'azs');

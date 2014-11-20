@@ -17,7 +17,7 @@ class clientsModel extends Model {
     public function insertClient($client_fio, $client_address, $client_mail, $client_number) {
         $this->_db
             ->prepare(
-                "INSERT INTO clients VALUES(NULL, :client_fio, :client_address, :client_mail, :client_number, NULL)")
+                "INSERT INTO clients VALUES(NULL, :client_fio, :client_address, :client_mail, :client_number, DEFAULT)")
             ->execute (array(
                 ':client_fio' => $client_fio,
                 ':client_address' => $client_address,

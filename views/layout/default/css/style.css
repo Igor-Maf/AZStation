@@ -62,10 +62,9 @@ th {
     color: #fff
 }
 th, td {
-    padding: 10px 15px;
+    padding: 5px 10px;
     border: 1px solid #29264E
 }
-
 
 /* PAGE BLOCKS */
 .wrapper {
@@ -77,30 +76,37 @@ th, td {
 
 /* header */
 header, footer, section {
-    padding: 0 20px
+    padding: 0 20px;
+    overflow: hidden
 }
 header, footer {
     background-color: #29264E
 }
 header {
     border-bottom: 1px solid #40B8AF;
-    height: 70px
 }
 header .app-title, header .menu, footer p {
-    display: inline-block;
     color: #40B8AF
+}
+header .app-title {
+    float: left
 }
 
 /* content section */
-#error {
-    background-color: #CC3333;
+#error, 
+#access {
     display: inline-block;
     padding: 10px 15px;
     margin: 15px 0;
     color: #fff;
     font-weight: bold
 }
-section {}
+#error {
+    background-color: #CC3333;
+}
+#access {
+    background-color: #279B61;
+}
 
 /* footer */
 footer {

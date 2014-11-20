@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-17 20:43:41
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-20 20:16:50
          compiled from "E:\xampp\htdocs\azs-app\views\clients\edit.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5043546a487eb36323-55584379%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cdc306e98df4f3d06232e235d68c588139463f60' => 
     array (
       0 => 'E:\\xampp\\htdocs\\azs-app\\views\\clients\\edit.tpl',
-      1 => 1416253351,
+      1 => 1416511002,
       2 => 'file',
     ),
   ),
@@ -50,7 +50,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </p>
     <p>
         <label for="client_scores"> Баллы </label>
-        <input type="number" min="0" max="999" step="0.01" id="client_scores" class="validate[required]" name="client_scores" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['client_scores'];?>
+        <input type="number" min="<?php echo $_smarty_tpl->tpl_vars['data']->value['client_scores'];?>
+" max="10000" step="0.01" id="client_scores" class="validate[required]" name="client_scores" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['client_scores'];?>
 " />
     </p>
     <p>
