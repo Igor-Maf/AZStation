@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $( ".datepicker" ).datepicker({dateFormat:'yy-mm-dd'});
+    //$( ".datepicker" ).datepicker({dateFormat:'yy-mm-dd'});
     $( "#form" ).validationEngine();
     
     var options = {
@@ -7,5 +7,3 @@ $(document).ready(function() {
     }
     $('.jclock').jclock(options);
 });
-
-

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-20 20:14:55
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-02 18:50:22
          compiled from "E:\xampp\htdocs\azs-app\views\clients\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:311895468c4a9941715-83763618%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '89a0b95aab2bab39bd758013b977ac1ded7e53af' => 
     array (
       0 => 'E:\\xampp\\htdocs\\azs-app\\views\\clients\\index.tpl',
-      1 => 1416510892,
+      1 => 1417542566,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5468c4a9a05799_74180955')) {function content_5468c4a9a05799_74180955($_smarty_tpl) {?><h1> Клиенты АЗС </h1>
 <hr>
-<p id="access">При добавлении нового клиента ему начисляются 100 баллов. </p>
+<p class="access">При добавлении нового клиента ему начисляются 100 баллов. </p>
 <form name="form" id="form" method="post" action="">
     <input type="hidden" name="add_client" value="1">
     <p>
@@ -116,5 +116,5 @@ icons/delete.png" title="Удалить" class="icon">
     <p><?php echo $_smarty_tpl->tpl_vars['pagination']->value;?>
 </p>
 <?php } else { ?>
-    <p> Не найдено ни одного клиента. </p>
+    <p class="error"> Не найдено ни одного клиента. </p>
 <?php }?><?php }} ?>

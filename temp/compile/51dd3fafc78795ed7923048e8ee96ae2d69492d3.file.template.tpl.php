@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-19 22:32:38
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-02 19:34:00
          compiled from "E:\xampp\htdocs\azs-app\views\layout\default\template.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:151535468a4762b97d4-00283436%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '51dd3fafc78795ed7923048e8ee96ae2d69492d3' => 
     array (
       0 => 'E:\\xampp\\htdocs\\azs-app\\views\\layout\\default\\template.tpl',
-      1 => 1416432755,
+      1 => 1417545235,
       2 => 'file',
     ),
   ),
@@ -51,10 +51,6 @@ public/js/jquery.validationEngine.js"><?php echo '</script'; ?>
 >
         <?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
-public/js/jquery-ui-1.9.2.custom.min.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
 public/js/jquery.jclock.js"><?php echo '</script'; ?>
 >
         <?php echo '<script'; ?>
@@ -77,8 +73,6 @@ $_smarty_tpl->tpl_vars['js']->_loop = true;
         
         <link href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
 public/css/validationEngine.jquery.css" type="text/css" rel="stylesheet"/>
-        <link href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
-public/css/jquery-ui-1.9.2.custom.min.css" type="text/css" rel="stylesheet"/>
         <link href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root_css'];?>
 style.css" type="text/css" rel="stylesheet"/>
         <link href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root_css'];?>
@@ -108,11 +102,11 @@ $_smarty_tpl->tpl_vars['menu']->_loop = true;
             </header>
             <section>
                 <?php if (isset($_smarty_tpl->tpl_vars['_access']->value)) {?>
-                    <div id="access"><?php echo $_smarty_tpl->tpl_vars['_access']->value;?>
+                    <div class="access"><?php echo $_smarty_tpl->tpl_vars['_access']->value;?>
 </div>
                 <?php }?>
                 <?php if (isset($_smarty_tpl->tpl_vars['_error']->value)) {?>
-                    <div id="error"><?php echo $_smarty_tpl->tpl_vars['_error']->value;?>
+                    <div class="error"><?php echo $_smarty_tpl->tpl_vars['_error']->value;?>
 </div>
                 <?php }?>
                 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['_content']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -120,7 +114,6 @@ $_smarty_tpl->tpl_vars['menu']->_loop = true;
             </section>
             <footer>
                 <p class="jclock"></p>
-                
                 <p>&copy <?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['app_create'];?>
 </p>
             </footer>

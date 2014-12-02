@@ -12,6 +12,9 @@ a {
 a:hover {
     color: #008AB8
 }
+p {
+    line-height: 22px
+}
 hr {
     border: 0;
     height: 1px;
@@ -30,9 +33,19 @@ form {
     width: 350px;
     margin-bottom: 50px
 }
+.form-gasoline {
+    width: 405px
+}
+.form-gasoline input {
+    float: none;
+    width: 100px;
+    text-align: center;
+    margin-right: 10px
+}
 label {
     font-weight: bold;
-    cursor: pointer
+    cursor: pointer;
+    margin-right: 10px;
 }
 input, textarea, select, button {
     width : 220px;
@@ -93,18 +106,18 @@ header .app-title {
 }
 
 /* content section */
-#error, 
-#access {
+.error, 
+.access {
     display: inline-block;
     padding: 10px 15px;
     margin: 15px 0;
     color: #fff;
     font-weight: bold
 }
-#error {
+.error {
     background-color: #CC3333;
 }
-#access {
+.access {
     background-color: #279B61;
 }
 

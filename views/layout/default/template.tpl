@@ -7,7 +7,6 @@
         <script type="text/javascript" src="{$_layoutParams.root}public/js/jquery.js"></script>
         <script type="text/javascript" src="{$_layoutParams.root}public/js/jquery.validationEngine-ru.js"></script>
         <script type="text/javascript" src="{$_layoutParams.root}public/js/jquery.validationEngine.js"></script>
-        <script type="text/javascript" src="{$_layoutParams.root}public/js/jquery-ui-1.9.2.custom.min.js"></script>
         <script type="text/javascript" src="{$_layoutParams.root}public/js/jquery.jclock.js"></script>
         <script type="text/javascript" src="{$_layoutParams.root}public/js/main.js"></script>
         
@@ -18,7 +17,6 @@
         {/if}
         
         <link href="{$_layoutParams.root}public/css/validationEngine.jquery.css" type="text/css" rel="stylesheet"/>
-        <link href="{$_layoutParams.root}public/css/jquery-ui-1.9.2.custom.min.css" type="text/css" rel="stylesheet"/>
         <link href="{$_layoutParams.root_css}style.css" type="text/css" rel="stylesheet"/>
         <link href="{$_layoutParams.root_css}page.css" type="text/css" rel="stylesheet"/>
     </head>
@@ -38,16 +36,15 @@
             </header>
             <section>
                 {if isset($_access)}
-                    <div id="access">{$_access}</div>
+                    <div class="access">{$_access}</div>
                 {/if}
                 {if isset($_error)}
-                    <div id="error">{$_error}</div>
+                    <div class="error">{$_error}</div>
                 {/if}
                 {include file=$_content}
             </section>
             <footer>
                 <p class="jclock"></p>
-                {*<p>{$smarty.now|date_format:"%Y-%m-%d, %H:%M:%S"}</p>*}
                 <p>&copy {$_layoutParams.app_create}</p>
             </footer>
         </div>

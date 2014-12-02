@@ -1,6 +1,6 @@
 <h1> Клиенты АЗС </h1>
 <hr>
-<p id="access">При добавлении нового клиента ему начисляются 100 баллов. </p>
+<p class="access">При добавлении нового клиента ему начисляются 100 баллов. </p>
 <form name="form" id="form" method="post" action="">
     <input type="hidden" name="add_client" value="1">
     <p>
@@ -64,5 +64,5 @@
     </table>
     <p>{$pagination}</p>
 {else}
-    <p> Не найдено ни одного клиента. </p>
+    <p class="error"> Не найдено ни одного клиента. </p>
 {/if}

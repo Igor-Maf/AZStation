@@ -9,10 +9,15 @@ class indexModel extends Model {
         return $gas->fetchAll();
     }   
     
+    public function getGasById($id) {
+        $gas_by_id = $this->_db->query("SELECT * FROM gas WHERE gas_id = $id");
+        return $gas_by_id->fetch();
+    }
+    
     public function editGasPrice($id, $price) {
         $this->_db
             ->prepare(
-                "UPDATE gass SET gas_price = :price WHERE gas_id = :id")
+                "UPDATE gas SET gas_price = :price WHERE gas_id = :id")
             ->execute (array(
                 ':id' => $id,
                 ':price' => $price));
