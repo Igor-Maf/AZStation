@@ -54,4 +54,23 @@ class clientsModel extends Model {
             ->prepare("DELETE FROM clients WHERE client_id = :id")
             ->execute (array(':id' => $id));
     }
+    
+    
+    public function getScores($id) {
+        $scores = $this->_db->query("SELECT client_scores FROM clients WHERE client_id = '$id'");
+        return $scores->fetchColumn();
+    }
+
+    public function addScores($scores, $id) {
+        $update_scores = $this->_db
+                            ->prepare(
+                                "UPDATE clients SET "
+                                . "client_scores = :scores "
+                                . "WHERE client_id = :id")
+                            ->execute (array(
+                                ':id' => $id,
+                                ':scores' => $scores));
+        
+        return $update_scores;
+    }
 }

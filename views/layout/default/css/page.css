@@ -1,7 +1,29 @@
+/* thumbnails */
 img.icon {
     height: 25px;
     width: 25px
 }
 img.thumbnail {
     max-width: 50px
+}
+
+
+/* forms */
+.form-input {
+    width: 400px
+}
+.form-gasoline {
+    width: 405px
+}
+.form-gasoline input {
+    float: none;
+    width: 100px;
+    text-align: center;
+    margin-right: 10px
+}
+.form-standart input[type="number"] {
+    width: 70px;
+    text-align: center;
+    float: none;
+    margin-left: 20px
 }

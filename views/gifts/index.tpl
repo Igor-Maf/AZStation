@@ -12,7 +12,7 @@
     </p>  
     <p>
         <label for="gift_scores"> Баллы </label>
-        <input type="number" min="10" max="10000" step="10" id="gift_scores" class="validate[required]" name="gift_scores" value="{$data.gift_scores|default:""}}" />
+        <input type="number" min="10" step="10" id="gift_scores" class="validate[required]" name="gift_scores" value="{$data.gift_scores|default:""}}" />
     </p>
     <p>
         <input type="submit" value="Добавить подарок">

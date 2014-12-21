@@ -22,4 +22,10 @@ class indexModel extends Model {
                 ':id' => $id,
                 ':price' => $price));
     }
+    
+    /* for buy page */
+    public function getGasPriceByType($type) {
+        $gas_price_by_type = $this->_db->query("SELECT gas_price FROM gas WHERE gas_type = '$type'");
+        return $gas_price_by_type->fetchColumn();
+    }
 }

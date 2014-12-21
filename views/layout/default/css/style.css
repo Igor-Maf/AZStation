@@ -28,19 +28,22 @@ img {
     max-width: 100%
 }
 
+/* clear flow */
+.clearfix:before, 
+.clearfix:after {
+    content: "";
+    display: table
+}
+.clearfix:after {
+    clear: both
+}
+
+
 /* form */
 form {
     width: 350px;
-    margin-bottom: 50px
-}
-.form-gasoline {
-    width: 405px
-}
-.form-gasoline input {
-    float: none;
-    width: 100px;
-    text-align: center;
-    margin-right: 10px
+    margin-bottom: 50px;
+    overflow: hidden
 }
 label {
     font-weight: bold;
@@ -55,12 +58,9 @@ input, textarea, select, button {
     -moz-box-sizing: border-box; 
     box-sizing: border-box
 }
-
-.form-standart input[type="number"] {
-    width: 70px;
-    text-align: center;
+.radio-group input[type="radio"] {
     float: none;
-    margin-left: 20px
+    width: auto
 }
 
 /* table */

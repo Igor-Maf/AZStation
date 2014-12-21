@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-20 22:01:30
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-21 17:39:38
          compiled from "E:\xampp\htdocs\azs-app\views\gifts\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10235546b99640f70d7-15806527%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '65e117ff95fc7548fd2811aca3d5f79fcd99f2ca' => 
     array (
       0 => 'E:\\xampp\\htdocs\\azs-app\\views\\gifts\\index.tpl',
-      1 => 1416517285,
+      1 => 1419179965,
       2 => 'file',
     ),
   ),
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </p>  
     <p>
         <label for="gift_scores"> Баллы </label>
-        <input type="number" min="10" max="10000" step="10" id="gift_scores" class="validate[required]" name="gift_scores" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['data']->value['gift_scores'])===null||$tmp==='' ? '' : $tmp);?>
+        <input type="number" min="10" step="10" id="gift_scores" class="validate[required]" name="gift_scores" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['data']->value['gift_scores'])===null||$tmp==='' ? '' : $tmp);?>
 }" />
     </p>
     <p>

@@ -20,7 +20,7 @@
     </p>
     <p>
         <label for="client_scores"> Баллы </label>
-        <input type="number" min="{$data.client_scores}" max="10000" step="0.01" id="client_scores" class="validate[required]" name="client_scores" value="{$data.client_scores}" />
+        <input type="number" min="{$data.client_scores}" step="0.01" id="client_scores" class="validate[required]" name="client_scores" value="{$data.client_scores}" />
     </p>
     <p>
         <input type="submit" value="Редактировать">
