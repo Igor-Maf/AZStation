@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-02 18:50:22
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-06 21:12:48
          compiled from "E:\xampp\htdocs\azs-app\views\clients\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:311895468c4a9941715-83763618%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '89a0b95aab2bab39bd758013b977ac1ded7e53af' => 
     array (
       0 => 'E:\\xampp\\htdocs\\azs-app\\views\\clients\\index.tpl',
-      1 => 1417542566,
+      1 => 1420575163,
       2 => 'file',
     ),
   ),
@@ -82,8 +82,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['cl']->key => $_smarty_tpl->tpl_vars['
 $_smarty_tpl->tpl_vars['cl']->_loop = true;
 ?>
             <tr>
-                <td><?php echo $_smarty_tpl->tpl_vars['cl']->value['client_id'];?>
-</td>
+                <td><a href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
+clients/view/<?php echo $_smarty_tpl->tpl_vars['cl']->value['client_id'];?>
+" title="Посмотреть профиль клиента"><?php echo $_smarty_tpl->tpl_vars['cl']->value['client_id'];?>
+</a></td>
                 <td><?php echo $_smarty_tpl->tpl_vars['cl']->value['client_fio'];?>
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['cl']->value['client_address'];?>

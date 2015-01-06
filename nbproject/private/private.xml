@@ -3,14 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/xampp/htdocs/azs-app/models/InputModel.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/views/input/index.tpl</file>
-            <file>file:/E:/xampp/htdocs/azs-app/controllers/InputController.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/views/index/edit.tpl</file>
-            <file>file:/E:/xampp/htdocs/azs-app/models/indexModel.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/models/clientsModel.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/controllers/indexController.php</file>
-            <file>file:/E:/xampp/htdocs/azs-app/app/View.php</file>
+            <file>file:/E:/xampp/htdocs/azs-app/app/Controller.php</file>
+            <file>file:/E:/xampp/htdocs/azs-app/app/Model.php</file>
+            <file>file:/E:/xampp/htdocs/azs-app/app/Database.php</file>
+            <file>file:/E:/xampp/htdocs/azs-app/index.php</file>
+            <file>file:/E:/xampp/htdocs/azs-app/controllers/inputController.php</file>
+            <file>file:/E:/xampp/htdocs/azs-app/app/Bootstrap.php</file>
         </group>
     </open-files>
 </project-private>

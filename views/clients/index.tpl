@@ -43,7 +43,7 @@
         </tr>
         {foreach from = $clients item = cl}
             <tr>
-                <td>{$cl.client_id}</td>
+                <td><a href="{$_layoutParams.root}clients/view/{$cl.client_id}" title="Посмотреть профиль клиента">{$cl.client_id}</a></td>
                 <td>{$cl.client_fio}</td>
                 <td>{$cl.client_address}</td>
                 <td>{$cl.client_mail}</td>

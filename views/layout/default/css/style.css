@@ -13,7 +13,7 @@ a:hover {
     color: #008AB8
 }
 p {
-    line-height: 22px
+    line-height: 1.5em
 }
 hr {
     border: 0;
@@ -48,7 +48,7 @@ form {
 label {
     font-weight: bold;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 2%
 }
 input, textarea, select, button {
     width : 220px;

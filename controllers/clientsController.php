@@ -5,6 +5,7 @@ class clientsController extends Controller {
     public function __construct() {
         parent::__construct();
         $this->_model = $this->loadModel('clients');
+        $this->_modelClientGifts = $this->loadModel('clientGifts');
     }
     
     public function index($pagina = false) {
@@ -64,10 +65,7 @@ class clientsController extends Controller {
     }
     
     public function edit($id) {
-        if (!$this->filterInt($id)) {
-            $this->redirect('clients');
-        }
-        if (!$this->_model->getClientById($this->filterInt($id))) {
+        if (!$this->filterInt($id) || !$this->_model->getClientById($this->filterInt($id))) {
             $this->redirect('clients');
         }
         
@@ -124,14 +122,41 @@ class clientsController extends Controller {
     
     
     public function delete($id) {
-        if (!$this->filterInt($id)) {
-            $this->redirect('clients');
-        }
-        if (!$this->_model->getClientById($this->filterInt($id))) {
+        if (!$this->filterInt($id) || !$this->_model->getClientById($this->filterInt($id))) {
             $this->redirect('clients');
         }
         
         $this->_model->deleteClient($this->filterInt($id));
         $this->redirect('clients');
+    }
+    
+    
+    /* for user profile */
+    public function view($id) {
+        if (!$this->filterInt($id) || !$this->_model->getClientById($this->filterInt($id))) {
+            $this->redirect('clients');
+        }
+
+        $scores = $this->_model->getScores($this->filterInt($id));
+        
+        $this->_view->assign('cl', $this->_model->getClientById($this->filterInt($id)));
+        $this->_view->assign('gifts', $this->_modelClientGifts->getGiftsByScores($scores));
+        $this->_view->assign('title', 'Клиент АЗС');
+        $this->_view->renderizer('view');
+    }
+    
+    
+    public function get($id, $scores) { 
+        if (!$this->filterInt($id) || !$this->_model->getClientById($this->filterInt($id)) || !$this->filterFloat($scores)) {
+            $this->redirect('clients');
+        }
+        
+        $client_scores = $this->_model->getScores($this->filterInt($id));
+        $scores = $client_scores - $scores;
+        
+        
+        $this->_modelClientGifts->editClientScores($this->filterInt($id), $scores);
+        
+        $this->redirect('clients/view/' . $this->filterInt($id));
     }
 }

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-21 18:11:33
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-06 22:35:01
          compiled from "E:\xampp\htdocs\azs-app\views\input\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:844547e0b5a8482f9-59880570%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7770aec90f96722ba747c1502f69f7af33f9160a' => 
     array (
       0 => 'E:\\xampp\\htdocs\\azs-app\\views\\input\\index.tpl',
-      1 => 1419181883,
+      1 => 1420580097,
       2 => 'file',
     ),
   ),
@@ -31,12 +31,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <input type="hidden" name="buy_form" value="1">
     <p>
         <label for="client_id">Идентификатор клиента</label>
-        <input type="text" id="client_id" name="client_id" value="">
-         <small>&#40;<i>Только числовое значение</i>&#41;</small>
+        <input type="number" id="client_id" name="client_id" value="">
+        <small class="full-width">&#40;<i>Только числовое значение</i>&#41;</small>
     </p>
     <p>
-        <a href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
-clients/view/" target="_blank">Посмотреть профиль этого клиента</a>
+        <a id="profile" href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
+clients/view/">Посмотреть профиль этого клиента</a>
     </p>
     
     <div class="clearfix"></div>

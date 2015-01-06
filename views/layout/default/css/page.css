@@ -27,3 +27,20 @@ img.thumbnail {
     float: none;
     margin-left: 20px
 }
+
+
+
+/* widths */
+.full-width {
+    width: 100%;
+    float: left
+}
+.third {
+    width: 33%;
+    float: left;
+    margin-bottom: 3em
+}
+.two-third {
+    width: 66%;
+    float: left
+}

@@ -36,6 +36,14 @@ abstract class Controller {
         else 
             return 0;
     }
+    
+    protected function filterFloat($float) {
+        $float = (float) $float;
+        if (is_float($float))
+            return $float;
+        else 
+            return 0;
+    }
      
     protected function getSql($key) {
         if (isset($_POST[$key]) && !empty($_POST[$key])) {

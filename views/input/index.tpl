@@ -4,11 +4,11 @@
     <input type="hidden" name="buy_form" value="1">
     <p>
         <label for="client_id">Идентификатор клиента</label>
-        <input type="text" id="client_id" name="client_id" value="">
-         <small>&#40;<i>Только числовое значение</i>&#41;</small>
+        <input type="number" id="client_id" name="client_id" value="">
+        <small class="full-width">&#40;<i>Только числовое значение</i>&#41;</small>
     </p>
     <p>
-        <a href="{$_layoutParams.root}clients/view/" target="_blank">Посмотреть профиль этого клиента</a>
+        <a id="profile" href="{$_layoutParams.root}clients/view/">Посмотреть профиль этого клиента</a>
     </p>
     
     <div class="clearfix"></div>

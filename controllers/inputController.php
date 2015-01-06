@@ -7,6 +7,7 @@ class inputController extends Controller {
     }
     
     public function index() {
+        $this->_view->setJs(array('input-main'));
         $this->_view->assign('title', 'Ввод');
         $this->_view->assign('gas', $this->_modelGas->getGas());
         
